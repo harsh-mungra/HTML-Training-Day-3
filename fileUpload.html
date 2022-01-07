@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        File Type Validation
+    </title>
+    <script>
+        function fileValidation() {
+            var fileInput =
+                document.getElementById('file');
+
+            var filePath = fileInput.value;
+
+            var allowedExtensions =
+                /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+            if (!allowedExtensions.exec(filePath)) {
+                alert('Invalid file type');
+                fileInput.value = '';
+                return false;
+            }
+            else {
+                alert('File type is ' + fileInput.type);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>Upload an Image</p>
+    <input type="file" id="file"
+           onchange="return fileValidation()" />
+</body>
+
+</html>

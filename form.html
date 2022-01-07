@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #fname, #lname {
+            width: 80px;
+        }
+
+        #workPhone, #mobile {
+            width: 80px;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        .submitBtn {
+            background-color: royalblue;
+            color: white;
+        }
+        #navbar {
+            float: left;
+            width: 15%;
+            background: #353333;
+            padding: 20px;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 85%;
+            background-color: #f1f1f1;
+        }
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        #form {
+            display: inline;
+            width: 70%;
+        }
+        .nav-link {
+            color: white;
+        }
+        a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="navbar">
+            <table id="navList">
+                <tr>
+                    <td><a href="#">Dashboard</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Items</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Banking</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Sales</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Customers</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Retainer Invoice</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Invoices</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Payments Received</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Recurring Invoices</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Credit Notes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Purchases</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Time Tracking</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">e-Way Bills</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">GST Filing</a></td>
+                </tr>
+            </table>
+            <!--<ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Items</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Banking</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Sales</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Customers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Retainer Invoice</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Invoices</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Payments Received</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Recurring Invoices</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Credit Notes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Purchases</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Time Tracking</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">e-Way Bills</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">GST Filing</a>
+        </li>
+    </ul>-->
+        </div>
+        <article>
+            <div id="form">
+                <h3>New Customer</h3>
+                <form action="#">
+                    <table>
+                        <tr>
+                            <td><label for="customerType">Customer Type</label></td>
+                            <td>
+                                <input type="radio" name="customerType" id="business" value="business" />
+                                <label for="business">Business</label>&nbsp;
+                                <input type="radio" name="customerType" id="individual" value="individual" />
+                                <label for="individual">Individual</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="contact">Primary Contact</label></td>
+                            <td>
+                                <select name="contact" id="contact">
+                                    <option value="Mr">Mr.</option>
+                                    <option value="Mrs">Mrs.</option>
+                                    <option value="Miss">Miss</option>
+                                </select>
+                                <input type="text" placeholder="First Name" name="fname" id="fname" />
+                                <input type="text" placeholder="Last Name" name="lname" id="lname" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="companyName">Company Name</label></td>
+                            <td><input type="text" name="companyName" id="companyName" /></td>
+                        </tr>
+                        <tr>
+                            <td><label id="mandatory" for="displayName">Customer Display Name<sup>*</sup></label></td>
+                            <td>
+                                <select name="displayName" id="displayName">
+                                    <option value="ric">Ric</option>
+                                    <option value="stefan">Stefan</option>
+                                    <option value="elijah">Elijah</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mail">Customer Email</label></td>
+                            <td><input type="email" name="mail" id="mail" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">Customer Phone</label></td>
+                            <td>
+                                <input type="text" placeholder="Work Phone" name="workPhone" id="workPhone" pattern="\d{10}" />
+                                <input type="text" placeholder="Mobile" name="mobile" id="mobile" pattern="\d{10}" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="website">Website</label></td>
+                            <td><input type="url" name="website" id="website" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" class="submitBtn" name="submit" value="Save" />
+                                <input type="reset" name="reset" value="Cancel" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

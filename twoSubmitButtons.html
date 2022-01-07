@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Two Submit Buttons</title>
+    <script>
+        window.onload() = function () {
+            var submitBtn1 = document.getElementById("submit1");
+            var submitBtn2 = document.getElementById("submit2");
+            var table = document.getElementById("dataTable");
+
+            submitBtn1.onclick = function () {
+                var name = document.getElementById("fname").value;
+                var newRow = document.createElement("tr");
+                
+                var col1 = document.createElement("td");
+                col1.innerHTML = name;
+                newRow.appendChild(col1);
+                var col2 = document.createElement("td");
+                col1.innerHTML = "Submit1";
+                newRow.appendChild(col2);
+                table.appendChild(newRow);
+                //table.innerHTML += '<tr><td>' + name + '</td><td>Submit1</td></tr>';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Two Submit Buttons with different Action</h1>
+        <div>
+            <h3>Submit Form</h3>
+            <form action="#" method="get">
+                <label for="fname">Firstname</label>
+                <input type="text" name="fname" id="fname" required />
+                
+                <input type="submit" name="submit" id="submit1" value="Submit1"/>
+                <input type="submit" name="submit" id="submit2" value="Submit2" formaction="submitBtn2.html" />
+                <input type="submit" name="submit" id="submit" value="Submit" formaction="submitBtn.html"/>
+            </form>
+        </div>
+        <div>
+            <table id="dataTable" border="1">
+                <th>Firstname</th>
+                <th>Submitted Via</th>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
